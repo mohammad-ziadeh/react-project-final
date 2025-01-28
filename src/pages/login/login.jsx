@@ -7,19 +7,17 @@ import * as Yup from "yup";
 function App() {
   const formik = useFormik({
     initialValues: {
-     
       email: "",
       password: "",
     },
     validationSchema: Yup.object({
-      
       email: Yup.string()
         .matches(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/, "Invalid email address")
         .required("Required"),
       password: Yup.string()
         .required("Required")
         .matches(
-          /^(?=.[A-Z])(?=.\d).{8,}$/,
+          /^(?=.*[A-Z])(?=.*\d)(?=.*[a-z])[A-Za-z\d]{8,}$/,
           "Must include one uppercase letter,  one number and be at least 8 characters"
         ),
     }),
@@ -36,9 +34,6 @@ function App() {
               <strong>Welcome Your Account </strong>
             </p>
             <form className="form" onSubmit={formik.handleSubmit}>
-              
-             
-              
               <input
                 type="email"
                 name="email"

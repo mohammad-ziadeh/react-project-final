@@ -56,8 +56,8 @@ function App() {
       password: Yup.string()
         .required("Required")
         .matches(
-          /^(?=.[A-Z])(?=.\d).{8,}$/,
-          "Must include one uppercase letter,  one number and be at least 8 characters"
+          /^(?=.*[A-Z])(?=.*\d).{8,}$/,
+          "Must include one uppercase letter, one number, and be at least 8 characters"
         ),
     }),
     onSubmit: (values) => {
