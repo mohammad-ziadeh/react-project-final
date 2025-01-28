@@ -17,7 +17,7 @@ function Contact() {
     setFormData({ name: "", email: "", message: "" });
   };
   return (
-    <section style={{ backgroundColor: "#b7e6fa", height: "110vh" }}>
+    <section style={{ backgroundColor: "snow", height: "110vh" }}>
       <div className="contact-section">
         <h2 className="section-title">Contact Us</h2>
         <form className="contact-form" onSubmit={handleSubmit}>
