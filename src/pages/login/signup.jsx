@@ -5,6 +5,37 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 function App() {
+  // const [firstName, setFirstName] = useState("");
+  // const [lastName, setLastName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+  // const navigate = useNavigate();
+
+  // const handleRegister = (e) => {
+  //   e.preventDefault();
+
+  //   // Retrieve saved users or initialize an empty array
+  //   let savedUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+  //   // Create a new user object
+  //   let newUser = {
+  //     email,
+  //     password,
+  //     name: `${firstName} ${lastName}`,
+  //   };
+
+  //   // Add new user to the array and save to localStorage
+  //   savedUsers.push(newUser);
+  //   localStorage.setItem("users", JSON.stringify(savedUsers));
+
+  //   alert("You have successfully registered!");
+
+  //   // Redirect to login page
+  //   setTimeout(() => {
+  //     navigate("/login");
+  //   }, 1000);
+  // };
+
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -46,7 +77,7 @@ function App() {
                 type="text"
                 name="firstName"
                 id="firstName"
-                placeholder="First Name"   
+                placeholder="First Name"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.firstName}
