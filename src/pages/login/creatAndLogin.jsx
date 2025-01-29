@@ -1,42 +1,37 @@
-// import React from "react";
-// import Login from "./login";
-// import Signup from "./signup";
-// export default function creatAndLogin() {
-//   return (
-//     <div>
-//       <Login />
-//       <Signup />
-//     </div>
-//   );
-// }
-import React, { useState, useEffect } from "react";
+import React, { useRef } from "react";
 import Login from "./login";
 import Signup from "./signup";
+import "./log.css";
 
 export default function CreatAndLogin() {
-  const [isAccountCreated, setIsAccountCreated] = useState(false);
-
-  // Disable scrolling when the account isn't created
-  useEffect(() => {
-    if (!isAccountCreated) {
-      document.body.style.overflow = "hidden"; // Disable scrolling
-    } else {
-      document.body.style.overflow = "auto"; // Enable scrolling
-    }
-
-    // Cleanup when the component unmounts
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isAccountCreated]);
-
+  const loginSectionRef = useRef(null);
+  const signupSectionRef = useRef(null);
+  const handleScrollToLogin = () => {
+    loginSectionRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+  const handleScrollToSignup = () => {
+    signupSectionRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+  const handleValidSignIn = () => {
+    alert("Login Successful!");
+  };
   return (
-    <div>
-      {!isAccountCreated ? (
-        <Signup onAccountCreated={() => setIsAccountCreated(true)} />
-      ) : (
-        <Login />
-      )}
+    <div style={{ overflow: "hidden", height: "130vh" }}>
+      <div ref={signupSectionRef}>
+        <Signup handleScrollToLogin={handleScrollToLogin} />
+      </div>
+      <div ref={loginSectionRef}>
+        <Login
+          handleScrollToSignup={handleScrollToSignup}
+          onValidSignIn={handleValidSignIn}
+        />
+      </div>
     </div>
   );
 }

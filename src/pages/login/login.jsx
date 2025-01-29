@@ -4,7 +4,7 @@ import "./log.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-function App() {
+function App({ handleScrollToSignup }) {
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -17,12 +17,12 @@ function App() {
       password: Yup.string()
         .required("Required")
         .matches(
-          /^(?=.*[A-Z])(?=.*\d)(?=.*[a-z])[A-Za-z\d]{8,}$/,
-          "Must include one uppercase letter,  one number and be at least 8 characters"
+          /^(?=.*[A-Z])(?=.*\d).{8,}$/,
+          "Must include one uppercase letter, one number, and be at least 8 characters"
         ),
     }),
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      onValidSignIn();
     },
   });
   return (
@@ -31,7 +31,7 @@ function App() {
         <div className="overlay">
           <article>
             <p className="tag">
-              <strong>Welcome Your Account </strong>
+              <strong>Welcome to your Account </strong>
             </p>
             <form className="form" onSubmit={formik.handleSubmit}>
               <input
@@ -64,6 +64,12 @@ function App() {
                 <span className="red">Terms and Services</span>
               </small>
             </form>
+            <p>
+              Don't have an account?{" "}
+              <button className="changeButton" onClick={handleScrollToSignup}>
+                Click here to sign up!
+              </button>
+            </p>
           </article>
         </div>
       </section>

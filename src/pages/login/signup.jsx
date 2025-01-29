@@ -4,38 +4,7 @@ import "./log.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-function App() {
-  // const [firstName, setFirstName] = useState("");
-  // const [lastName, setLastName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-  // const navigate = useNavigate();
-
-  // const handleRegister = (e) => {
-  //   e.preventDefault();
-
-  //   // Retrieve saved users or initialize an empty array
-  //   let savedUsers = JSON.parse(localStorage.getItem("users")) || [];
-
-  //   // Create a new user object
-  //   let newUser = {
-  //     email,
-  //     password,
-  //     name: `${firstName} ${lastName}`,
-  //   };
-
-  //   // Add new user to the array and save to localStorage
-  //   savedUsers.push(newUser);
-  //   localStorage.setItem("users", JSON.stringify(savedUsers));
-
-  //   alert("You have successfully registered!");
-
-  //   // Redirect to login page
-  //   setTimeout(() => {
-  //     navigate("/login");
-  //   }, 1000);
-  // };
-
+function App({ handleScrollToLogin }) {
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -61,7 +30,7 @@ function App() {
         ),
     }),
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      handleScrollToLogin();
     },
   });
   return (
@@ -83,7 +52,9 @@ function App() {
                 value={formik.values.firstName}
               />
               {formik.touched.firstName && formik.errors.firstName ? (
-                <div style={{ color: "red" }}>{formik.errors.firstName}</div>
+                <div className="err" style={{ color: "red" }}>
+                  {formik.errors.firstName}
+                </div>
               ) : null}
               <input
                 type="text"
@@ -121,12 +92,20 @@ function App() {
               {formik.touched.password && formik.errors.password ? (
                 <div style={{ color: "red" }}>{formik.errors.password}</div>
               ) : null}
+
               <button type="submit">Sign up </button>
+
               <small>
                 By clicking the button, you are agreeing to our{" "}
                 <span className="red">Terms and Services</span>
               </small>
             </form>
+            <p>
+              Already have an account?{" "}
+              <button className="changeButton" onClick={handleScrollToLogin}>
+                Click here to login!
+              </button>
+            </p>
           </article>
         </div>
       </section>
