@@ -70,7 +70,7 @@ body {
   margin-bottom: 1rem;
 }
 .form {
-  line-height: 7px;
+  width: 500px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -97,7 +97,7 @@ body {
   font-size: 1rem;
   color: var(--Dark-Blue);
 }
-.form button {
+.form .subBtn {
   background-color: var(--Green);
   font-size: 1rem;
   height: 40px;
