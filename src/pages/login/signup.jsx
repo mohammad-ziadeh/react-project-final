@@ -93,19 +93,20 @@ function App({ handleScrollToLogin }) {
                 <div style={{ color: "red" }}>{formik.errors.password}</div>
               ) : null}
 
-              <button type="submit">Sign up </button>
+              <button className="subBtn" type="submit">Sign up </button>
 
               <small>
-                By clicking the button, you are agreeing to our{" "}
-                <span className="red">Terms and Services</span>
+                <p>
+                  Already have an account?{" "}
+                  <button
+                    className="changeButton"
+                    onClick={handleScrollToLogin}
+                  >
+                    Click here to login!
+                  </button>
+                </p>
               </small>
             </form>
-            <p>
-              Already have an account?{" "}
-              <button className="changeButton" onClick={handleScrollToLogin}>
-                Click here to login!
-              </button>
-            </p>
           </article>
         </div>
       </section>

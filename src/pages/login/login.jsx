@@ -58,18 +58,21 @@ function App({ handleScrollToSignup }) {
               {formik.touched.password && formik.errors.password ? (
                 <div style={{ color: "red" }}>{formik.errors.password}</div>
               ) : null}
-              <button type="submit">log in </button>
+              <button className="subBtn" type="submit">
+                log in{" "}
+              </button>
               <small>
-                By clicking the button, you are agreeing to our{" "}
-                <span className="red">Terms and Services</span>
+                <p>
+                  Don't have an account?{" "}
+                  <button
+                    className="changeButton"
+                    onClick={handleScrollToSignup}
+                  >
+                    Click here to sign up!
+                  </button>
+                </p>
               </small>
             </form>
-            <p>
-              Don't have an account?{" "}
-              <button className="changeButton" onClick={handleScrollToSignup}>
-                Click here to sign up!
-              </button>
-            </p>
           </article>
         </div>
       </section>
