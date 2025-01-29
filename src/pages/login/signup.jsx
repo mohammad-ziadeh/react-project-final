@@ -93,7 +93,9 @@ function App({ handleScrollToLogin }) {
                 <div style={{ color: "red" }}>{formik.errors.password}</div>
               ) : null}
 
-              <button className="subBtn" type="submit">Sign up </button>
+              <button className="subBtn" type="submit">
+                Sign up{" "}
+              </button>
 
               <small>
                 <p>
