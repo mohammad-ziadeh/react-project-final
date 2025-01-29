@@ -17,7 +17,7 @@ export default function App() {
       <Navbar/>
       <Hero/>
       <About />
-      <FloatButton.BackTop />
+      <FloatButton.BackTop  />
       <Activity />
       <Contact />
       <Footer />

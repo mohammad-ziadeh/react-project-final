@@ -20,6 +20,7 @@ function About() {
       <div className="grid">
         <div class="flex3">
           <div>
+            
             <IoIosHome
               style={{
                 color: "white",
