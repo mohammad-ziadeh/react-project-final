@@ -1,0 +1,27 @@
+{
+    "description": "Welcome to our academy, where we provide the best educational environment for children.",
+    "welcome": "Welcome to CodeKids!",
+    "description": "We make coding fun and easy for children.",
+    "footer-description": "we believe coding is the language of the future! We provide a fun and interactive learning environment where children can develop creativity and problem-solving skills through engaging projects and hands-on coding experiences. ", // {t("footer-description")}
+"about": "About",  //{t("about")}
+  "activity": "Activity", //{t("activity")}
+  "contact": "Contact", //{t("contact")}
+  "©":"© 2025 Shining Stars Academy. All Rights Reserved.", //{t("©")}
+
+
+  "A":"A", //{t("A")}
+  "cademy ":"cademy", //{t("cademy")}
+  "S":"S", //{t("S")}
+   "hining ":"hining", //{t("hining")}
+   "Ss":"S", //{t("Ss")}
+   "tars":"tars", //{t("tars")}
+   "Send Message": "Send Message",    //{t("Send Message")}
+      "Your Email":"Your Email",  //  {t("Your Email")}
+      "Your Name": "Your Name",//  {t("Your Name")}
+      "Your Message": "Your Message",// {t("Your Message")}
+      "Contact Us": "Contact Us" //{t("Contact Us")}
+  
+
+
+  }
+  

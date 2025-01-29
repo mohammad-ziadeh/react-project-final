@@ -1,4 +1,4 @@
-.footer {
+/* .footer {
   background-color: snow;
   color: #5a2eaa;
   text-align: center;
@@ -25,4 +25,34 @@
 
 .footer-links li a:hover {
   color: #ffcc80;
+} */
+.footer {
+  background-color: #4255a4;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 14px;
+}
+
+
+
+.footer-links li a {
+  color: #ffcc80;
+
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+  color: #12d9df;
+}
+.social-icons{
+/* background-color: red; */
+display: flex;
+justify-content: center;
+
 }

@@ -3,22 +3,18 @@ import "./about.css";
 import { TbHorseToy } from "react-icons/tb";
 import { IoIosHome } from "react-icons/io";
 import { GiNotebook } from "react-icons/gi";
-
+import { useTranslation } from "react-i18next";
 function About() {
+  const { t } = useTranslation();
   return (
     <div className="container">
       <h1>
         welcome to our <span>Shining Stars Academy</span>
       </h1>
-      <p>
-        The shining stars academy school seeks to provide an outstanding
-        educational environment that enhances children's abilities and develops
-        their academic and social skills. We believe that every child has unique
-        possibilities.
-      </p>
+      <p>{t("description")}</p>
 
       <div className="grid">
-        <div class="flex3">
+        <div className="flex3">
           <div></div>
           <div></div>
           <div></div>
