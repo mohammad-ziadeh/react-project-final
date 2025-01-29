@@ -4,7 +4,7 @@ import "./log.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-function App() {
+function App({ handleScrollToLogin }) {
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -25,12 +25,12 @@ function App() {
       password: Yup.string()
         .required("Required")
         .matches(
-          /^(?=.[A-Z])(?=.\d).{8,}$/,
-          "Must include one uppercase letter,  one number and be at least 8 characters"
+          /^(?=.*[A-Z])(?=.*\d).{8,}$/,
+          "Must include one uppercase letter, one number, and be at least 8 characters"
         ),
     }),
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      handleScrollToLogin();
     },
   });
   return (
@@ -46,13 +46,15 @@ function App() {
                 type="text"
                 name="firstName"
                 id="firstName"
-                placeholder="First Name"   
+                placeholder="First Name"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.firstName}
               />
               {formik.touched.firstName && formik.errors.firstName ? (
-                <div style={{ color: "red" }}>{formik.errors.firstName}</div>
+                <div className="err" style={{ color: "red" }}>
+                  {formik.errors.firstName}
+                </div>
               ) : null}
               <input
                 type="text"
@@ -90,10 +92,21 @@ function App() {
               {formik.touched.password && formik.errors.password ? (
                 <div style={{ color: "red" }}>{formik.errors.password}</div>
               ) : null}
-              <button type="submit">Sign up </button>
+
+              <button className="subBtn" type="submit">
+                Sign up{" "}
+              </button>
+
               <small>
-                By clicking the button, you are agreeing to our{" "}
-                <span className="red">Terms and Services</span>
+                <p>
+                  Already have an account?{" "}
+                  <button
+                    className="changeButton"
+                    onClick={handleScrollToLogin}
+                  >
+                    Click here to login!
+                  </button>
+                </p>
               </small>
             </form>
           </article>

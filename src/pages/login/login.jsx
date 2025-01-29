@@ -4,27 +4,25 @@ import "./log.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-function App() {
+function App({ handleScrollToSignup }) {
   const formik = useFormik({
     initialValues: {
-     
       email: "",
       password: "",
     },
     validationSchema: Yup.object({
-      
       email: Yup.string()
         .matches(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/, "Invalid email address")
         .required("Required"),
       password: Yup.string()
         .required("Required")
         .matches(
-          /^(?=.[A-Z])(?=.\d).{8,}$/,
-          "Must include one uppercase letter,  one number and be at least 8 characters"
+          /^(?=.*[A-Z])(?=.*\d).{8,}$/,
+          "Must include one uppercase letter, one number, and be at least 8 characters"
         ),
     }),
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      onValidSignIn();
     },
   });
   return (
@@ -33,12 +31,9 @@ function App() {
         <div className="overlay">
           <article>
             <p className="tag">
-              <strong>Welcome Your Account </strong>
+              <strong>Welcome to your Account </strong>
             </p>
             <form className="form" onSubmit={formik.handleSubmit}>
-              
-             
-              
               <input
                 type="email"
                 name="email"
@@ -63,10 +58,19 @@ function App() {
               {formik.touched.password && formik.errors.password ? (
                 <div style={{ color: "red" }}>{formik.errors.password}</div>
               ) : null}
-              <button type="submit">log in </button>
+              <button className="subBtn" type="submit">
+                log in{" "}
+              </button>
               <small>
-                By clicking the button, you are agreeing to our{" "}
-                <span className="red">Terms and Services</span>
+                <p>
+                  Don't have an account?{" "}
+                  <button
+                    className="changeButton"
+                    onClick={handleScrollToSignup}
+                  >
+                    Click here to sign up!
+                  </button>
+                </p>
               </small>
             </form>
           </article>
