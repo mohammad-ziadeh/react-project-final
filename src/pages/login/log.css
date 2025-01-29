@@ -10,8 +10,8 @@
 :root {
   /* ### Primary */
 
-  --Red:rgba(255, 192, 203, 0.61);
-  --Green:#ed128f;
+  --Red: rgba(255, 192, 203, 0.61);
+  --Green: #ed128f;
 
   /* ### Accent */
 
@@ -30,15 +30,19 @@ body {
 }
 
 .showcase {
-  
-  background-image:url(../../../public/img/output-onlinepngtools.png);
+  background-image: url(../../../public/img/output-onlinepngtools.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+<<<<<<< HEAD
   max-width: 100%;
   /* height:100vh; */
   height: calc(100vh - 0.1px);
   background-color:rgba(255, 192, 203, 0.61) ;
+=======
+  background-color: rgba(255, 192, 203, 0.61);
+  height: 150vh;
+>>>>>>> abbe71667ab7c3daa30e22e5961707696b1b6849
 }
 
 .overlay {
@@ -46,8 +50,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   color: #fff;
-  height: calc(100vh - 0.1px);
+  height: calc(130vh);
   padding: 3rem 1.5rem;
 }
 
@@ -72,6 +77,7 @@ body {
   margin-bottom: 1rem;
 }
 .form {
+  line-height: 7px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -101,6 +107,7 @@ body {
 .form button {
   background-color: var(--Green);
   font-size: 1rem;
+  height: 40px;
   color: #fff;
   border: none;
   outline: none;
@@ -115,12 +122,20 @@ body {
   -o-border-radius: 0.5rem;
   box-shadow: 0px 7px 0px #a11865;
 }
+.changeButton {
+  color: var(--Green);
+}
+.err {
+  color: red;
+  padding: 0px;
+  margin: 0px;
+}
 .form small {
   color: var(--Dark-Blue);
   text-align: center;
 }
 .form small span {
-  color:#fccd10f0;
+  color: #fccd10f0;
   font-weight: bold;
 }
 @media (max-width: 768px) {

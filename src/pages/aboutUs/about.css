@@ -28,6 +28,15 @@
   font-family: var(--font-family);
   text-align: center;
 }
+.container h2 {
+  align-items: center;
+  gap: 40px;
+  display: flex;
+  margin-top: 100px;
+  color: var(--fifth-color);
+  font-family: var(--font-family);
+  text-align: center;
+}
 .container span {
   color: var(--third-color);
   font-family: var(--font-family);
