@@ -5,7 +5,7 @@ import Creat from "./pages/login/creatAndLogin";
 export default function App() {
   return (
     <div>
-      {/* <Home /> */}
+      <Home />
       <Creat />
     </div>
   );
