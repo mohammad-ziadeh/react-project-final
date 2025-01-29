@@ -19,59 +19,64 @@ function About() {
 
       <div className="grid">
         <div class="flex3">
-          <div>
-            <IoIosHome
-              style={{
-                color: "white",
-                backgroundColor: "#2a92ca",
-                borderRadius: "50px",
-                width: "80px",
-                height: "80px",
-              }}
-            />
-          </div>
-          <div>
-            <TbHorseToy
-              style={{
-                color: "white",
-                backgroundColor: "#fbcc1b",
-                borderRadius: "50px",
-                width: "80px",
-                height: "80px",
-              }}
-            />
-          </div>
-          <div>
-            <GiNotebook
-              style={{
-                color: "white",
-                backgroundColor: "#14dad6",
-                borderRadius: "50px",
-                width: "80px",
-                height: "80px",
-              }}
-            />
-          </div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
 
         <div className="flex2">
           <ul>
             <li className="one">
-              <h2>Frindly Environment</h2>
+              <h2>
+                {" "}
+                <IoIosHome
+                  style={{
+                    color: "white",
+                    backgroundColor: "#2a92ca",
+                    borderRadius: "50px",
+                    width: "80px",
+                    height: "80px",
+                  }}
+                />
+                Frindly Environment
+              </h2>
             </li>
             <li className="pargraph">
               Providing an encouraging and safe environment<br></br> that
               encourages children to learn and interact freely{" "}
             </li>
             <li className="tow">
-              <h2>Educational Toys</h2>
+              <h2>
+                <TbHorseToy
+                  style={{
+                    color: "white",
+                    backgroundColor: "#fbcc1b",
+                    borderRadius: "50px",
+                    width: "80px",
+                    height: "80px",
+                  }}
+                />
+                Educational Toys
+              </h2>
             </li>
             <li className="pargraph">
               Games aimed at the pleasant development of children'smental and
               physical skills.{" "}
             </li>
             <li className="three">
-              <h2>Educational Activities</h2>
+              <h2>
+                {" "}
+                <GiNotebook
+                  style={{
+                    color: "white",
+                    backgroundColor: "#14dad6",
+                    borderRadius: "50px",
+                    width: "80px",
+                    height: "80px",
+                  }}
+                />
+                Educational Activities
+              </h2>
             </li>
             <li className="pargraph">
               Activities aimed at stimulating children's <br></br>thinking and
