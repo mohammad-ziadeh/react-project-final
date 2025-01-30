@@ -1,38 +1,58 @@
-.contact-section {
-    background-color: #f9f9f9;
+.contact-form-container {
     padding: 40px;
     border-radius: 10px;
-    max-width: 600px;
-    margin: 20px auto;
+    max-width: 700px;
+    margin: 40px auto;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* height: 500px; control the size */
+    display: flex;
+    justify-content: center;
+   
   }
-  
   .section-title {
+    margin-top: 100px;
     font-size: 24px;
     color: #5a2eaa;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
   }
-  
+  .icon {
+
+    color: #ed068c;
+  }
   .contact-form input,
   .contact-form textarea {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    
+    
   }
   
   .contact-form button {
-    background-color: #ffa726;
+    background-color: #ed068c;
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s;
+    
   }
   
   .contact-form button:hover {
-    background-color: #fb8c00;
+    background-color: #12d9df;
+  }
+  h3{
+    color:#5a2eaa;
+  }
+  
+  .contact-card p{
+    color: #fbd010;
+    font-style: italic;
+    font-weight: bold;
   }

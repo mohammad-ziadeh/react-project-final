@@ -1,10 +1,25 @@
 import React from "react";
-
+import  {useState , useEffect} from "react" ;
 import "./log.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
 function App({ handleScrollToLogin }) {
+  const [usersData, setUsersData] = useState([]);
+
+  
+  useEffect(() => {
+    const savedUsersData = JSON.parse(localStorage.getItem("usersData")) || [];
+    setUsersData(savedUsersData);
+  }, []);
+  const handleSaveUserData = (newUserData) => {
+    const updatedUsersData = [...usersData, newUserData];
+    setUsersData(updatedUsersData);
+
+ 
+    localStorage.setItem("usersData", JSON.stringify(updatedUsersData));
+  };
+
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -30,6 +45,12 @@ function App({ handleScrollToLogin }) {
         ),
     }),
     onSubmit: (values) => {
+      handleSaveUserData({
+        firstName: values.firstName,
+        lastName: values.lastName,
+        email: values.email,
+        password: values.password,
+      });
       handleScrollToLogin();
     },
   });

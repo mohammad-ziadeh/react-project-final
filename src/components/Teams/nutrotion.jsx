@@ -3,44 +3,19 @@ import Rania from "../../../public/img/team (2).png";
 import { useTranslation } from "react-i18next";
 import { IoArrowForwardOutline } from "react-icons/io5";
 
-
 import "./team.css";
-function Nutrotion() {
+function Nutrotion({ name, tag }) {
   const { t } = useTranslation();
 
-  const Member = {
-    backgroundImage: `url(${[Rania].join(", ")})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    width: "200px",
-    borderRadius: "50%",
-    border: "3px solid #BDE4F4",
-  };
   return (
-    <div className="Mangement">
-      <h2> Students </h2>
-      <p> StudentsStudentsStudentsStudentsStudentsStudentsStudentsStudents </p>
-
-      <div className="container-mang">
-        <div className="member">
-          <img
-            src={Rania}
-            alt="Member"
-            style={Member}
-            className="image-member"
-          />
-          <h4> Student One </h4>
-          <h6> Technical Trainer </h6>
-          <a
-            href="/Rania"
-            style={{ borderBottom: "1px dotted red", fontSize: "14px" }}
-          >
-            {" "}
-            More <IoArrowForwardOutline />{" "}
-          </a>
-        </div>
+    <div className="flex flex-col items-center w-[150px] h-[200px] space-y-2">
+      <div className="w-[150px] h-[150px] rounded-full border-4 border-[#BDE4F4] overflow-hidden">
+        <img src={Rania} alt="Member" className="w-full h-full object-cover" />
       </div>
+      <h4 className="text-lg font-semibold">{name}</h4>
+      <h6 className="text-sm text-gray-600">{tag}</h6>
     </div>
   );
 }
+
 export default Nutrotion;

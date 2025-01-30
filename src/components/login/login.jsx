@@ -1,10 +1,16 @@
 import React from "react";
-
+import { useState } from "react";
 import "./log.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
 
 function App({ handleScrollToSignup }) {
+  const [loginError, setLoginError] = useState("");
+  const navigate = useNavigate();
+  const goToHome = () => {
+    navigate("/");
+  };
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -22,9 +28,22 @@ function App({ handleScrollToSignup }) {
         ),
     }),
     onSubmit: (values) => {
-      onValidSignIn();
+      const savedUsersData =
+        JSON.parse(localStorage.getItem("usersData")) || [];
+      const foundUser = savedUsersData.find(
+        (user) =>
+          user.email === values.email && user.password === values.password
+      );
+
+      if (foundUser) {
+        goToHome();
+      } else {
+        setLoginError("Invalid email or password.");
+      }
     },
+    // onValidSignIn();
   });
+
   return (
     <div>
       <section className="showcase">

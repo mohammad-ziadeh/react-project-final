@@ -1,9 +1,11 @@
 import React, { useRef } from "react";
-import Login from "./login";
-import Signup from "./signup";
-import "./log.css";
+import Login from "../components/login/login";
+import Signup from "../components/login/signup";
+import "../components/login/log.css";
 
 export default function CreatAndLogin() {
+
+
   const loginSectionRef = useRef(null);
   const signupSectionRef = useRef(null);
   const handleScrollToLogin = () => {
@@ -19,7 +21,7 @@ export default function CreatAndLogin() {
     });
   };
   const handleValidSignIn = () => {
-    alert("Login Successful!");
+ 
   };
   return (
     <div style={{ overflow: "hidden", height: "130vh" }}>
