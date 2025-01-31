@@ -1,6 +1,7 @@
 import React from "react";
 import "./picture.css";
 
+
 function Picture() {
   return (
   

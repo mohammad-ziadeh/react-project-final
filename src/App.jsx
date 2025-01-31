@@ -12,7 +12,7 @@ export default function App() {
     <div>
       <Home />
       <Picture/>
-      {/* <Creat /> */}
+      <Creat />
     </div>
   );
 }
