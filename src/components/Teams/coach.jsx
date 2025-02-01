@@ -21,7 +21,11 @@ function Coach() {
   return (
     <div className="Mangement">
       <h2> Manager & Supervisor Team </h2>
-      <p> TeamTeamTeamTeamTeamTeamTeamTeamTeamTeamTeam </p>
+      <p style={{ width: "70%", margin: "auto" }}>
+        Strong leadership shapes a strong school. Our Supervisor and Manager
+        work tirelessly to support education, mentor staff, and foster student
+        success.
+      </p>
 
       <div className="container-mang">
         <div className="member">
@@ -43,12 +47,7 @@ function Coach() {
         </div>
 
         <div className="member">
-          <img
-            src={Abd}
-            alt="Member"
-            style={Member}
-            className="image-member"
-          />
+          <img src={Abd} alt="Member" style={Member} className="image-member" />
           <h4> Abd Karkash </h4>
           <h6> Technical Trainer </h6>
           <a

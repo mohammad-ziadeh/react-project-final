@@ -10,9 +10,9 @@ import ScrollAnimation from "react-animate-on-scroll";
 function About() {
   const { t } = useTranslation();
   return (
-    <div className="container">
+    <div className="container" style={{ fontFamily: "Nunito" }}>
       <h1>
-        welcome to our <span>Shining Stars Academy</span>
+        Welcome to <span>Shining Stars Academy</span>
       </h1>
       <p className="headerDis">{t("description")}</p>
 
@@ -33,12 +33,13 @@ function About() {
                   />
                 </ScrollAnimation>
                 <ScrollAnimation
-                  animateIn="slideInLeft"
+                  animateIn="slideInRight"
                   animateOnce={true}
-                  duration={2}
+                  duration={1}
                   initiallyVisible={false}
                 >
-                  Friendly Environment
+                  {" "}
+                  {t("friendlyEnv")}
                 </ScrollAnimation>
               </h2>
 
@@ -46,11 +47,10 @@ function About() {
                 <ScrollAnimation
                   animateIn="slideInRight"
                   animateOnce={true}
-                  duration={2}
+                  duration={1.5}
                   initiallyVisible={false}
                 >
-                  Providing an encouraging and safe environment that encourages
-                  children to learn and interact freely
+                  {t("friendlyEnvPara")}
                 </ScrollAnimation>
               </p>
             </li>
@@ -68,23 +68,22 @@ function About() {
                   />
                 </ScrollAnimation>
                 <ScrollAnimation
-                  animateIn="slideInLeft"
+                  animateIn="slideInRight"
                   animateOnce={true}
-                  duration={2}
+                  duration={1}
                   initiallyVisible={false}
                 >
-                  Educational Toys
+                  {t("EduToys")}
                 </ScrollAnimation>
               </h2>
               <p className="paragraph">
                 <ScrollAnimation
                   animateIn="slideInRight"
                   animateOnce={true}
-                  duration={2}
+                  duration={1.5}
                   initiallyVisible={false}
                 >
-                  Games aimed at the pleasant development of children's mental
-                  and physical skills.
+                  {t("EduToysPara")}
                 </ScrollAnimation>
               </p>{" "}
             </li>
@@ -102,23 +101,23 @@ function About() {
                   />
                 </ScrollAnimation>
                 <ScrollAnimation
-                  animateIn="slideInLeft"
+                  animateIn="slideInRight"
                   animateOnce={true}
-                  duration={2}
+                  duration={1}
                   initiallyVisible={false}
                 >
-                  Educational Activities
+                  {" "}
+                  {t("EduAct")}
                 </ScrollAnimation>
               </h2>
               <p className="paragraph">
                 <ScrollAnimation
                   animateIn="slideInRight"
                   animateOnce={true}
-                  duration={2}
+                  duration={1.5}
                   initiallyVisible={false}
                 >
-                  Activities aimed at stimulating children's thinking and
-                  creativity through play and practical experiences
+                  {t("EduActPara")}
                 </ScrollAnimation>
               </p>{" "}
             </li>

@@ -5,6 +5,8 @@ import { FaPhone, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Footer from "../components/footers/Footer";
 import Navbar from "../components/navbar/navbar";
+import SecHero from "../components/SecHero/SecHero";
+import { FloatButton } from "antd";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -24,11 +26,13 @@ function Contact() {
     alert(`Thank you, ${formData.name}, for your message!`);
     setFormData({ name: "", email: "", message: "" });
   };
-
+ 
   return (
     <>
       <Navbar />
-      <section style={{ backgroundColor: "snow", paddingBottom: "50px" }}>
+      <SecHero Title={t("contact_us")} />
+      <FloatButton.BackTop />
+      <section style={{ backgroundColor: "pink", paddingBottom: "50px" }}>
         <div
           className="contact-cards-container"
           style={{

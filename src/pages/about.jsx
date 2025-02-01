@@ -1,20 +1,26 @@
 import React, { useState, useEffect } from "react";
 import Coach from "../components/Teams/coach";
 import Technical from "../components/Teams/technical";
-import Nutrotion from "../components/Teams/nutrotion";
 import ScrollAnimation from "react-animate-on-scroll";
 import Navbar from "../components/navbar/navbar";
 import "animate.css/animate.compat.css";
 import Footer from "../components/footers/Footer";
 import Motion from "../components/motion-scroll/studentsRoll";
 import "../components/Teams/team.css";
+import SecHero from "../components/SecHero/SecHero";
+import { FloatButton } from "antd";
+import { useTranslation } from "react-i18next";
 
-export default function Team() {
+
+export default function Team({ Title }) {
+  const { t } = useTranslation();
   return (
     <div>
       <Navbar />
+       <SecHero Title={t("about_us")} />;
       <ScrollAnimation animateIn="fadeIn">
         <Coach />
+        <FloatButton.BackTop />
       </ScrollAnimation>
       <ScrollAnimation animateIn="fadeIn">
         <Technical />

@@ -20,8 +20,12 @@ function Technical() {
   };
   return (
     <div className="Mangement">
-      <h2> Teacher </h2>
-      <p> TeacherTeacherTeacherTeacherTeacherTeacher </p>
+      <h2> Teachers </h2>
+      <p style={{ width: "70%", margin: "auto" }}>
+        {" "}
+        Meet our dedicated team of teachers who inspire, educate, and guide our
+        students toward success!{" "}
+      </p>
 
       <div className="container-mang">
         <div className="member">
@@ -66,7 +70,7 @@ function Technical() {
             style={Member}
             className="image-member"
           />
-          <h4>  Mohammad Ziadeh </h4>
+          <h4> Mohammad Ziadeh </h4>
           <h6>Scrum Master</h6>
           <a
             href="./Shahd"

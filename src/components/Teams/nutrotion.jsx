@@ -12,8 +12,12 @@ function Nutrotion({ name, tag }) {
       <div className="w-[150px] h-[150px] rounded-full border-4 border-[#BDE4F4] overflow-hidden">
         <img src={Rania} alt="Member" className="w-full h-full object-cover" />
       </div>
-      <h4 className="text-lg font-semibold">{name}</h4>
-      <h6 className="text-sm text-gray-600">{tag}</h6>
+      <h4 className="text-lg font-semibold" style={{ fontFamily: "Nunito" }}>
+        {name}
+      </h4>
+      <h6 className="text-sm text-gray-600" style={{ fontFamily: "Nunito" }}>
+        {tag}
+      </h6>
     </div>
   );
 }

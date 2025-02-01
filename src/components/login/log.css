@@ -32,6 +32,8 @@ body {
 .showcase {
   background-image: url(../../../public/img/output-onlinepngtools.png);
   background-repeat: no-repeat;
+  position: relative;
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   background-color: rgba(255, 192, 203, 0.61);
@@ -45,7 +47,7 @@ body {
   justify-content: center;
 
   color: #fff;
-  height: calc(130vh);
+  height: 130vh;
   padding: 3rem 1.5rem;
 }
 
@@ -58,6 +60,9 @@ body {
   line-height: 1.8;
 } */
 .tag {
+  align-content: center;
+  font-size: 1.2rem;
+  height: 40px;
   background-color: #19dada;
   padding: 0.3rem 1rem;
   border-radius: 0.3rem;
@@ -70,6 +75,7 @@ body {
   margin-bottom: 1rem;
 }
 .form {
+  line-height: 19px;
   width: 500px;
   display: flex;
   flex-direction: column;
