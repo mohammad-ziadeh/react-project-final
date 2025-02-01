@@ -20,12 +20,8 @@ function Coach() {
 
   return (
     <div className="Mangement">
-      <h2> Manager & Supervisor Team </h2>
-      <p style={{ width: "70%", margin: "auto" }}>
-        Strong leadership shapes a strong school. Our Supervisor and Manager
-        work tirelessly to support education, mentor staff, and foster student
-        success.
-      </p>
+      <h2>{t("mangerSuper")}</h2>
+      <p style={{ width: "70%", margin: "auto" }}>{t("mangerSuperPara")}</p>
 
       <div className="container-mang">
         <div className="member">
@@ -36,7 +32,7 @@ function Coach() {
             className="image-member"
           />
           <h4> Rawan </h4>
-          <h6> Technical Trainer </h6>
+          <h6>{t("techTrainer")} </h6>
           <a
             href="./Amro"
             style={{ borderBottom: "1px dotted red", fontSize: "14px" }}
@@ -49,7 +45,7 @@ function Coach() {
         <div className="member">
           <img src={Abd} alt="Member" style={Member} className="image-member" />
           <h4> Abd Karkash </h4>
-          <h6> Technical Trainer </h6>
+          <h6>{t("techTrainer")}  </h6>
           <a
             href="./Ahmad"
             style={{ borderBottom: "1px dotted red", fontSize: "14px" }}

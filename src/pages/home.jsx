@@ -14,15 +14,14 @@ export default function home() {
   return (
     <div style={{ backgroundColor: "snow" }}>
       <Navbar />
-        <Hero />
+      <Hero />
 
       <About />
       <FloatButton.BackTop
         style={{
-          background:
-            "linear-gradient(45deg, #FF6F61, #FFD166, #06D6A0, #118AB2)",
+          backgroundColor: "#ed068c",
           color: "white",
-          borderRadius: "50%", // Fully round
+          borderRadius: "50%",
           fontSize: "20px",
         }}
       />

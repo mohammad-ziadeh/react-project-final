@@ -1,8 +1,11 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import styles from "../styles/Activity.module.css";
+import { useTranslation } from "react-i18next";
 
 function IndividualIntervalsExample() {
+  const { t } = useTranslation();
+
   return (
     <Carousel style={{ width: "100%", maxWidth: "1200px", margin: "0 auto" }}>
       <Carousel.Item interval={2500}>
@@ -13,8 +16,8 @@ function IndividualIntervalsExample() {
           className="d-block w-100"
         />
         <Carousel.Caption className={styles.cardsContainerText}>
-          <h3>Focused on the Future</h3>
-          <p>Encouraging problem-solving skills and innovation in every project.</p>
+          <h3>{t("focusedFuture")}</h3>
+          <p>{t("focusedFuturePara")}</p>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -26,8 +29,8 @@ function IndividualIntervalsExample() {
           className="d-block w-100"
         />
         <Carousel.Caption className={styles.cardsContainerText}>
-          <h3>Hands-on Robotics</h3>
-          <p>Empowering young minds to build and innovate with real-world technology!</p>
+          <h3>{t("handsOnRobotics")}</h3>
+          <p>{t("handsOnRoboticsPara")}</p>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -39,8 +42,8 @@ function IndividualIntervalsExample() {
           className="d-block w-100"
         />
         <Carousel.Caption className={styles.cardsContainerText}>
-          <h3>Exploring the Digital World</h3>
-          <p>Inspiring creativity and curiosity through coding and technology.</p>
+          <h3>{t("exploringDigitalWorld")}</h3>
+          <p>{t("exploringDigitalWorldPara")}</p>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -52,8 +55,8 @@ function IndividualIntervalsExample() {
           className="d-block w-100"
         />
         <Carousel.Caption className={styles.cardsContainerText}>
-          <h3>Collaborative Learning</h3>
-          <p>Building connections and teamwork through exciting STEM projects!</p>
+          <h3>{t("collaborativeLearning")}</h3>
+          <p>{t("collaborativeLearningPara")}</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

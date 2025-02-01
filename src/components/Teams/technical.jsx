@@ -20,12 +20,8 @@ function Technical() {
   };
   return (
     <div className="Mangement">
-      <h2> Teachers </h2>
-      <p style={{ width: "70%", margin: "auto" }}>
-        {" "}
-        Meet our dedicated team of teachers who inspire, educate, and guide our
-        students toward success!{" "}
-      </p>
+      <h2>{t("teachers")} </h2>
+      <p style={{ width: "70%", margin: "auto" }}>{t("teacherPara")}</p>
 
       <div className="container-mang">
         <div className="member">
@@ -36,7 +32,7 @@ function Technical() {
             className="image-member"
           />
           <h4> Salsbel </h4>
-          <h6>Scrum Master</h6>
+          <h6>{t("teacher")}</h6>
           <a
             href="./Amro"
             style={{ borderBottom: "1px dotted red", fontSize: "14px" }}
@@ -54,7 +50,7 @@ function Technical() {
             className="image-member"
           />
           <h4> Raneem Al-Riyati </h4>
-          <h6>Scrum Master</h6>
+          <h6>{t("teacher")}</h6>
           <a
             href="./Hussien"
             style={{ borderBottom: "1px dotted red", fontSize: "14px" }}
@@ -71,7 +67,7 @@ function Technical() {
             className="image-member"
           />
           <h4> Mohammad Ziadeh </h4>
-          <h6>Scrum Master</h6>
+          <h6>{t("teacher")}</h6>
           <a
             href="./Shahd"
             style={{ borderBottom: "1px dotted red", fontSize: "14px" }}
@@ -83,7 +79,7 @@ function Technical() {
         <div className="member">
           <img src={Abd} alt="Member" style={Member} className="image-member" />
           <h4> Abd Karkash </h4>
-          <h6>Scrum Master</h6>
+          <h6>{t("teacher")}</h6>
           <a
             href="./Laith"
             style={{ borderBottom: "1px dotted red", fontSize: "14px" }}

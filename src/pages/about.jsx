@@ -11,17 +11,23 @@ import SecHero from "../components/SecHero/SecHero";
 import { FloatButton } from "antd";
 import { useTranslation } from "react-i18next";
 
-
 export default function Team({ Title }) {
   const { t } = useTranslation();
   return (
     <div>
       <Navbar />
-       <SecHero Title={t("about_us")} />;
+      <SecHero Title={t("about_us")} />;
       <ScrollAnimation animateIn="fadeIn">
         <Coach />
-        <FloatButton.BackTop />
       </ScrollAnimation>
+      <FloatButton.BackTop
+        style={{
+          backgroundColor: "#ed068c",
+          color: "white",
+          borderRadius: "50%",
+          fontSize: "20px",
+        }}
+      />
       <ScrollAnimation animateIn="fadeIn">
         <Technical />
       </ScrollAnimation>
@@ -38,7 +44,7 @@ export default function Team({ Title }) {
           color: "#DC552C ",
         }}
       >
-        Our Students
+        {t("student")}
       </h2>
       <br />
       <ScrollAnimation animateIn="fadeIn">

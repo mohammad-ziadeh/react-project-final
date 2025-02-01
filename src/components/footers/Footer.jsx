@@ -23,18 +23,15 @@ function Footer() {
             </p>
           </h2>
           <p style={{ paddingInline: "20px" }}>{t("footer-description")}</p>
-          <div
-            className="social-icons"
-            style={{ display: "flex", gap: "10px" }}
-          >
-            <a href="#">
-              <FaTwitter style={{ color: "white" }} />
+          <div className="social-icons" style={{ display: "flex" }}>
+            <a href="https://x.com/?mx=2">
+              <FaTwitter />
             </a>
-            <a href="#">
-              <FaFacebookF style={{ color: "white" }} />
+            <a href="https://www.facebook.com/?locale=ar_AR">
+              <FaFacebookF />
             </a>
-            <a href="#">
-              <FaLinkedinIn style={{ color: "white" }} />
+            <a href="https://www.linkedin.com/">
+              <FaLinkedinIn />
             </a>
           </div>
           <p>{t("©")}</p>
@@ -42,7 +39,7 @@ function Footer() {
         <div className="footer-section footer-links">
           <ul>
             <li>
-              <h2> {t("Quick")} </h2>
+              <h2 style={{fontSize:"24px"}}>{t("Quick")} </h2>
             </li>
             <li>
               <a href="#"> {t("about")} </a>
@@ -55,6 +52,31 @@ function Footer() {
             </li>
             <li>
               <a href="#"> {t("students")}</a>
+            </li>
+          </ul>
+        </div>
+        <div className="footer-section footer-links">
+          <ul>
+            <li>
+              <h2> {t("partners")} </h2>
+            </li>
+            <li>
+              <a href="https://simplonline.co/login?redirect=%2Fclassrooms%2Fd4c96491-06fe-48f7-a0f3-5deb29d01377%2Fworkspaces%3Ftopic%3D28fa6069-d398-4279-bfde-f0ed8734a4c2">
+                {" "}
+                {t("simplonline")}
+              </a>
+            </li>
+            <li>
+              <a href="https://yo.orange.jo/orange-coding-academy">
+                {" "}
+                {t("orange")}
+              </a>
+            </li>
+            <li>
+              <a href="https://www.psut.edu.jo/ar"> {t("PSUT")}</a>
+            </li>
+            <li>
+              <a href="https://www.modee.gov.jo/Default/Ar"> {t("MoDEE")}</a>
             </li>
           </ul>
         </div>

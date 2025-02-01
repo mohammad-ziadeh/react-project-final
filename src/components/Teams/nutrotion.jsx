@@ -8,7 +8,7 @@ function Nutrotion({ name, tag }) {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col items-center w-[150px] h-[200px] space-y-2">
+    <div className="flex flex-col items-center w-[150px] h-[200px] space-y-2 ">
       <div className="w-[150px] h-[150px] rounded-full border-4 border-[#BDE4F4] overflow-hidden">
         <img src={Rania} alt="Member" className="w-full h-full object-cover" />
       </div>

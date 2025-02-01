@@ -23,7 +23,6 @@ function ParallaxText({ children, baseVelocity = 100 }) {
     clamp: false,
   });
 
-  // Dynamic wrapping calculation (ensure proper size and wrapping logic)
   const x = useTransform(baseX, (v) => `${wrap(-100, 0, v)}%`);
 
   const directionFactor = useRef(1);
@@ -55,7 +54,7 @@ function ParallaxText({ children, baseVelocity = 100 }) {
 
 export default function App() {
   return (
-    <section className="overflow-hidden w-full">
+    <section className="overflow-hidden w-full" style={{ direction: "ltr" }}>
       <ParallaxText baseVelocity={-3}>
         <div className="flex space-x-4">
           <Nutrotion name="Mohammad" />

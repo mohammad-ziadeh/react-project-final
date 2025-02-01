@@ -12,7 +12,14 @@ function About() {
   return (
     <div className="container" style={{ fontFamily: "Nunito" }}>
       <h1>
-        Welcome to <span>Shining Stars Academy</span>
+        <span style={{ color: "#ed128f", fontFamily: "Nunito" }}>{t("S")}</span>
+        {t("hining")}{" "}
+        <span style={{ color: "#fbd010", fontFamily: "Nunito" }}>
+          {t("Ss")}
+        </span>
+        {t("tars")}{" "}
+        <span style={{ color: "#12d9df", fontFamily: "Nunito" }}>{t("A")}</span>
+        {t("cademy")}
       </h1>
       <p className="headerDis">{t("description")}</p>
 

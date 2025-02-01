@@ -26,12 +26,19 @@ function Contact() {
     alert(`Thank you, ${formData.name}, for your message!`);
     setFormData({ name: "", email: "", message: "" });
   };
- 
+
   return (
     <>
       <Navbar />
       <SecHero Title={t("contact_us")} />
-      <FloatButton.BackTop />
+      <FloatButton.BackTop
+        style={{
+          backgroundColor: "#ed068c",
+          color: "white",
+          borderRadius: "50%",
+          fontSize: "20px",
+        }}
+      />
       <section style={{ backgroundColor: "pink", paddingBottom: "50px" }}>
         <div
           className="contact-cards-container"

@@ -1,7 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import "./rawan2.css";
-import logo from "../../../public/img/Green_and_Yellow_Illustrative_Children___Kids_Logo__3_-removebg-preview.png";
-import { styled, Switch } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { Segmented } from "antd";
@@ -13,31 +11,36 @@ const lngs = {
 };
 
 function Navbar() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
-  const goToAbout = () => {
-    navigate("/about");
-  };
-  const goToHome = () => {
-    navigate("/");
-  };
-  const goToContact = () => {
-    navigate("/contact");
-  };
+  const [isRtl, setIsRtl] = useState(false);
 
-  const { i18n } = useTranslation();
+  const goToAbout = () => navigate("/about");
+  const goToHome = () => navigate("/");
+  const goToContact = () => navigate("/contact");
+
+  const handleLanguageChange = (value) => {
+    i18n.changeLanguage(value);
+
+    if (value === "ar") {
+      document.documentElement.setAttribute("dir", "rtl");
+      setIsRtl(true);
+    } else {
+      document.documentElement.setAttribute("dir", "ltr");
+      setIsRtl(false);
+    }
+  };
 
   return (
-    <nav className="navbar" >
+    <nav className="navbar">
       <Segmented
         options={Object.keys(lngs).map((lng) => ({
           label: lngs[lng].nativeName,
           value: lng,
         }))}
         value={i18n.language}
-        onChange={(value) => i18n.changeLanguage(value)}
+        onChange={handleLanguageChange}
         style={{
-
           background: "#e6e6e6100",
           border: "1px solid #423f8d",
           color: "#423f8d",
@@ -51,10 +54,16 @@ function Navbar() {
         }}
         block
       />
-      {/* <div className="logo-container">
-        <img src={logo} alt="Shining Stars Logo" className="logo" />
-      </div> */}
-      <h2 style={{ color: "#423f8d", fontFamily: "Nunito", fontWeight: "700",marginLeft:"100px" }}>
+
+      <h2
+        style={{
+          color: "#423f8d",
+          fontFamily: "Nunito",
+          fontWeight: "700",
+          marginLeft: "100px",
+          marginRight: "100px",
+        }}
+      >
         <span style={{ color: "#ed128f", fontFamily: "Nunito" }}>{t("S")}</span>
         {t("hining")}{" "}
         <span style={{ color: "#fbd010", fontFamily: "Nunito" }}>
@@ -87,9 +96,6 @@ function Navbar() {
             {t("title6")}
           </a>
         </li>
-        {/* <li>
-          <a href="#">Activity</a>
-        </li> */}
         <li>
           <a
             className="navigation"
