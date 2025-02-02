@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import "animate.css/animate.compat.css";
 import ScrollAnimation from "react-animate-on-scroll";
 
+
 function About() {
   const { t } = useTranslation();
   return (

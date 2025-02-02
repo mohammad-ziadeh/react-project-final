@@ -9,13 +9,13 @@ import Contact from "../components/Contact/Contact";
 import { FloatButton } from "antd";
 import ScrollAnimation from "react-animate-on-scroll";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Event from "../components/eventCount/event"
 
 export default function home() {
   return (
     <div style={{ backgroundColor: "snow" }}>
       <Navbar />
       <Hero />
-
       <About />
       <FloatButton.BackTop
         style={{
@@ -26,6 +26,7 @@ export default function home() {
         }}
       />
       <Activity />
+      <Event />
       <Contact />
       <Footer />
     </div>
