@@ -16,7 +16,8 @@ export default function Team({ Title }) {
   return (
     <div>
       <Navbar />
-      <SecHero Title={t("about_us")} />;
+      <SecHero Title={t("about_us")} />
+    
       <ScrollAnimation animateIn="fadeIn">
         <Coach />
       </ScrollAnimation>
