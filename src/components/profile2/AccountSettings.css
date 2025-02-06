@@ -1,0 +1,111 @@
+/* AccountSettings.css */
+.account-settings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    background-color: #f9f9f9;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .account-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .account-header span {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .avatar-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .avatar-label {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .avatar-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .avatar-image {
+    height: 64px;
+    width: 64px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .input-container {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .input-container .text-field {
+    flex: 1;
+    border-radius: 8px;
+  }
+  
+  .text-field {
+    flex: 1;
+    border-radius: 8px;
+  }
+  
+  .password-help-text {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  hr {
+    border-color: #e0e0e0;
+  }
+  
+  .delete-account-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .button {
+    border-radius: 20px;
+    border: none;
+    width: 150px;
+    height: 40px;
+    background-color: #1e3a8a; /* Navy color */
+    color: white;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .change-password-button {
+    width: 100%; /* Adjust to full width */
+    background-color: #4CAF50; /* Green color */
+  }
+  
+  .change-password-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .button:hover {
+    background-color: #374151; /* Darker navy on hover */
+  }
+  
+  /* Styles for first name and last name fields */
+  .input-container .text-field {
+    border-radius: 12px;
+  }
+  
+  .input-container .text-field:first-child {
+    margin-right: 16px;
+  }
+  
